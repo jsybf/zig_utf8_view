@@ -10,7 +10,7 @@ pub fn main() !void {
     const allocator = gpa.allocator();
 
     // init table
-    var table_view = try tv.TableView.init(allocator, &.{ "character", "unicode(decimal)", "unicode(hex)", "unicode(binary)" });
+    var table_view = try tv.TableView.init(allocator, &.{ "character", "unicode(decimal)", "unicode(hex)", "utf-8(binary)" });
     defer table_view.deinit();
 
     // read from stdin
